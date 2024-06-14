@@ -1,13 +1,18 @@
 package com.example.doify;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import com.example.doify.R;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.doify.adapter.TodoAdapter;
 import com.example.doify.model.TodoItem;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -41,9 +48,34 @@ public class MainActivity extends AppCompatActivity {
         todoAdapter = new TodoAdapter(todoList);
         recyclerView.setAdapter(todoAdapter);
 
+
         // Get username from intent
         username = getIntent().getStringExtra("username");
         sharedPreferences = getSharedPreferences(TODO_PREFS, MODE_PRIVATE);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_dev:
+                        Intent intent = new Intent(MainActivity.this, developer.class);
+                        intent.putExtra("username", username);
+                        startActivity(intent);
+                        finish();
+                        return true;
+
+                    case R.id.navigation_home:
+                        return true;
+                    case R.id.navigation_settings:
+                        Intent intent2 = new Intent(MainActivity.this, settings.class);
+                        intent2.putExtra("username", username);
+                        startActivity(intent2);
+                        finish();
+                }
+                return false;
+            }
+        });
 
         // Load tasks
         loadTasks();

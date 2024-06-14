@@ -35,7 +35,7 @@ public class first_screen extends AppCompatActivity {
     }
 
     private void openLoginScreen() {
-        Intent intent = new Intent(first_screen.this, signUp.class);
+        Intent intent = new Intent(first_screen.this, login.class);
         startActivity(intent);
         finish(); // Optional, if you don't want the user to come back to this screen
     }

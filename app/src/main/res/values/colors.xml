@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="button_yellow">#E9B437</color>
     <!-- first_screen colors -->
 
     <color name="colorPrimary">#008577</color>
@@ -28,4 +29,15 @@
     <color name="rectangle_10_color">#D9D9D9</color>
     <color name="rectangle_12_color">#EFEFEF</color>
     <color name="rectangle_14_color">#161616</color>
+
+
+
+    <color name="_bg__sign_up_ek2_color">#FDF8F2</color>
+    <color name="front_view_man_posing_with_notes_face_1_color">#ffffff</color>
+    <color name="text_color">#0F1728</color>
+    <color name="label_color">#344053</color>
+    <color name="text_ek1_color">#667084</color>
+    <color name="hint_text_ek2_color">#475466</color>
+    <color name="text_ek4_color">#FFFFFF</color>
+    <color name="text_ek10_color">#E9B437</color>
 </resources>

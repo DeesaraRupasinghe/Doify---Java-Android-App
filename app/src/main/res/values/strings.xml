@@ -4,4 +4,22 @@
     <string name="delete_task">Delete Task</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="text_string">Sign up</string>
+    <string name="label_string">Name*</string>
+    <string name="text_ek1_string">Enter your name</string>
+    <string name="label_ek1_string">Email*</string>
+    <string name="text_ek2_string">Enter your email</string>
+    <string name="label_ek2_string">Password*</string>
+    <string name="text_ek3_string">Create a password</string>
+    <string name="hint_text_ek2_string">Must be at least 8 characters.</string>
+    <string name="text_ek4_string">Create account</string>
+    <string name="text_ek5_string">Sign up with Google</string>
+    <string name="text_ek6_string">Sign in with Facebook</string>
+    <string name="text_ek7_string">Sign in with Apple</string>
+    <string name="text_ek8_string">Sign in with Twitter</string>
+    <string name="text_ek9_string">Already have an account?</string>
+    <string name="text_ek10_string">Log in</string>
+
 </resources>
